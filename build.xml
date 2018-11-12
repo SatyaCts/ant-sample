@@ -1,4 +1,4 @@
-<project name="ant-sample" basedir="." default="build">
+<project name="ant-sample" basedir="." default="rebuild">
 
     <!-- properties -->
     <property name="src.dir"     value="src"/>
@@ -26,8 +26,7 @@
         <java jar="${jar.dir}/${ant.project.name}.jar" fork="true"/>
     </target>
 
-    <target name="build" depends="jar" description="build application"/>
-
+    
     <target name="doc" description="generate documentation">
         <mkdir dir="${doc.dir}" />
         <javadoc destdir="${doc.dir}" sourcepath="${src.dir}"/>
@@ -38,6 +37,6 @@
         <delete dir="${doc.dir}" />
     </target>
 
-    <target name="rebuild" depends="clean,build" description="rebuild application"/>
+    <target name="rebuild" depends="clean,run,doc" description="rebuild application"/>
 
 </project>
