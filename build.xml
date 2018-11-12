@@ -1,4 +1,4 @@
-<project name="ant-sample" basedir="." default="rebuild">
+<project name="ant-sample" basedir="." default="main">
 
     <!-- properties -->
     <property name="src.dir"     value="src"/>
@@ -37,6 +37,6 @@
         <delete dir="${doc.dir}" />
     </target>
 
-    <target name="rebuild" depends="clean,run,doc" description="rebuild application"/>
+    <target name="main" depends="clean,run,doc" description="rebuild application"/>
 
 </project>
