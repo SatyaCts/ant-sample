@@ -1,4 +1,4 @@
-# Sample Ant-based Java project to satya's demotest
+# Sample Ant-based Java project to satya's demo test
 
 This is an example of Java project with Ant build file.
 
